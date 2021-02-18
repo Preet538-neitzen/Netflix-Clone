@@ -2,8 +2,6 @@
 
 A Netflix Clone made using React and TMDB API. 
 
-Check it at:- https://punitlodha.github.io/NetflixClone
-
 Steps to install locally:-
 
 1. Clone the Project
