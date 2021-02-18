@@ -1,22 +1,19 @@
 import React from 'react';
-import './css/Main.css';
-import Main from './pages';
-import Login from './pages/Login';
-
-import { Switch, Route } from 'react-router-dom';
-import ChoosePlan from './pages/ChoosePlan';
-import Fortv from './components/Fortv'
+import { CssBaseline } from '@material-ui/core';
+import MoviesContextProvider from './components/MoviesContext';
+import Container from './components/Container';
+import ThemeContextProvider from './components/ThemeContext';
 
 function App() {
   return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={Main} />
-        <Route path="/login" component={Login} />
-        <Route path="/choose-plan" component={ChoosePlan} />
-        <Route path="/Fortv"  component={Fortv}/>
-      </Switch>
-    </div>
+    <>
+      <CssBaseline />
+      <MoviesContextProvider>
+        <ThemeContextProvider>
+          <Container />
+        </ThemeContextProvider>
+      </MoviesContextProvider>
+    </>
   );
 }
 
